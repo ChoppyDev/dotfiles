@@ -1,7 +1,7 @@
 
 There is a work in progress on this repository
 # Shortcuts
-
+WIP 
 
 
 
@@ -17,3 +17,5 @@ There is a work in progress on this repository
 - hyprpaper (wallpaper manager)
 
 - dunst (notififaction deamon)
+
+- waybar (status bar)
