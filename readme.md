@@ -19,3 +19,11 @@ WIP
 - dunst (notififaction deamon)
 
 - waybar (status bar)
+
+- brightnessctl (brightness manager)
+
+- pamixer (volume control)i
+
+
+
+see https://wiki.archlinux.org/title/Hyprland#Display_settings
