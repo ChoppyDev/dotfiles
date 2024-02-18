@@ -1,0 +1,42 @@
+{
+    "layer": "top",
+    "modules-left": ["hyprland/workspaces", "hyprland/mode"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["pulseaudio","battery", "clock"],
+    "hyprland/window": {
+        "max-length": 50
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+    "hyprland/workspaces": {
+    	"format": "{icon}",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down" : "hyprctl dispatch workspace e-1",
+	"on-click" : "activate",
+	"on-click-middle-release": "hyprctl dispatch workspace empty"
+    },
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    }, 
+    "height": 30
+}
