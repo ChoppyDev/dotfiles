@@ -108,7 +108,8 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: #4E00F2;
+    color: #ffffff;
 }
 
 #battery {
@@ -168,7 +169,7 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
+    background-color: #AD30F0;
     color: #000000;
 }
 

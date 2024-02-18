@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces", "hyprland/mode"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio","battery", "clock"],
+    "modules-right": ["keyboard-state", "pulseaudio","battery", "clock"],
     "hyprland/window": {
         "max-length": 50
     },
@@ -20,7 +20,6 @@
             "default": ["", ""]
         },
         "scroll-step": 1,
-        "on-click": "pavucontrol",
         "ignored-sinks": ["Easy Effects Sink"]
     },
     "hyprland/workspaces": {
@@ -38,5 +37,18 @@
     "clock": {
         "format-alt": "{:%a, %d. %b  %H:%M}"
     }, 
-    "height": 30
+    "height": 30,
+    "keyboard-state": {
+      "numlock": true,
+      "capslock": true,
+      "format": {
+        "numlock": "N {icon}",
+        "capslock": "C {icon}"
+      },
+      "device-path" : "/dev/input/by-path/platform-i8042-serio-0-event-kbd",
+      "format-icons": {
+        "locked": "",
+        "unlocked": ""
+      }
+  }
 }
