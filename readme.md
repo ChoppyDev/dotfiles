@@ -18,6 +18,11 @@ There is a work in progress on this repository
 - Zed Config
 - Dunst (noficiations)
 - Neofetch
+- Pywall
+- Wlogout
+- Hyprexpo
+- SwayNC
+- Clipboard history
 
 
 # Apps
@@ -51,9 +56,24 @@ see https://wiki.archlinux.org/title/Hyprland#Display_settings
 
 
 Palette : 
+
 #A67C5B
+
 #B5926D
+
 #C9AD7F
+
 #DECFAC
+
 #F6F7DD
+
+#AAED86
+
+#79E671
+
+#4ADD61
+
+#4C157
+
+#108F42
 
