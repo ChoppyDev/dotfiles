@@ -4,8 +4,26 @@ There is a work in progress on this repository
 WIP 
 
 
+# Roadmap 
+[ ] Hyprland
+[ ] Rofi
+[ ] Waybar
+[ ] Nvim
+[ ] File manager
+[ ] Hyprlock
+
+ 
 
 
+
+
+
+## To find next : 
+- Notification center
+- VSCODE config
+- Zed Config
+- Dunst (noficiations)
+- Neofetch
 # Apps
 
 - hyrpland (desktop manager)
