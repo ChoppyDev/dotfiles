@@ -3,7 +3,7 @@
   font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
   font-weight: bold;
   font-size: 16px;
-  color: #dcdfe1;
+  color: #F6F7DD;
 }
 
 /* 透明 Waybar 背景 */
@@ -18,7 +18,7 @@
 #window,
 #tray{
   /*background-color: rgba(29,31,46, 0.95);*/
-  background-color: rgba(15,27,53,0.9);
+  background-color: #B5926D;
   padding: 4px 6px; /* 保持内部间距 */
   margin-top: 6px; /* 外部间距增加 */
   margin-left: 6px; /* 外部间距增加 */
@@ -29,7 +29,7 @@
 
 #clock,
 #custom-power{
-  background-color: rgba(15,27,53,0.9);
+  background-color: #B5926D;
   margin-top: 6px; /* 与屏幕顶部留出距离 */
   margin-right: 6px;
   /*margin-bottom: 4px;*/
@@ -40,7 +40,7 @@
 
 #network,
 #custom-lock{
-  background-color: rgba(15,27,53,0.9);
+  background-color: #B5926D;
   margin-top: 6px; /* 与屏幕顶部留出距离 */
   margin-left: 6px;
   /*margin-bottom: 4px;*/
@@ -57,7 +57,7 @@
 #custom-temperature,
 #memory,
 #cpu{
-  background-color: rgba(15,27,53,0.9);
+  background-color: #B5926D;
   margin-top: 6px; /* 与屏幕顶部留出距离 */
   /*margin-bottom: 4px;*/
   padding: 4px 2px; /* 保持内部间距 */
@@ -98,7 +98,7 @@
 }
 
 #workspaces button.active {
-  background-color: #61afef; /* 蓝色高亮 */
+  background-color: #A67C5B; /* 蓝色高亮 */
   color: #ffffff;
   padding: 2px 8px;
   margin: 0 2px;

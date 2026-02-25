@@ -44,4 +44,22 @@ WIP
 
 
 
+
+
+Restart waybar : 
+
+``` pkill waybar && hyprctl dispatch exec waybar ```
+
+
+
+
 see https://wiki.archlinux.org/title/Hyprland#Display_settings
+
+
+Palette : 
+#A67C5B
+#B5926D
+#C9AD7F
+#DECFAC
+#F6F7DD
+
