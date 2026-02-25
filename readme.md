@@ -5,12 +5,12 @@ WIP
 
 
 # Roadmap 
-[ ] Hyprland
-[ ] Rofi
-[ ] Waybar
-[ ] Nvim
-[ ] File manager
-[ ] Hyprlock
+- [ ] Hyprland
+- [ ] Rofi
+- [ ] Waybar
+- [ ] Nvim
+- [ ] File manager
+- [ ] Hyprlock
 
  
 
