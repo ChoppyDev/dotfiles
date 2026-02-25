@@ -1,29 +1,25 @@
 
 There is a work in progress on this repository
 # Shortcuts
-WIP 
-
-
 # Roadmap 
-- [ ] Hyprland
-- [ ] Rofi
+- [X] Hyprland
+- [X] Keybinds
+- [ ] Animations
 - [ ] Waybar
+- [ ] Rofi
 - [ ] Nvim
 - [ ] File manager
 - [ ] Hyprlock
 
  
-
-
-
-
-
 ## To find next : 
 - Notification center
 - VSCODE config
 - Zed Config
 - Dunst (noficiations)
 - Neofetch
+
+
 # Apps
 
 - hyrpland (desktop manager)
@@ -49,8 +45,6 @@ WIP
 Restart waybar : 
 
 ``` pkill waybar && hyprctl dispatch exec waybar ```
-
-
 
 
 see https://wiki.archlinux.org/title/Hyprland#Display_settings

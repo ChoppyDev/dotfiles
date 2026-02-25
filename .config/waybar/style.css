@@ -44,9 +44,13 @@
   margin-top: 6px; /* 与屏幕顶部留出距离 */
   margin-left: 6px;
   /*margin-bottom: 4px;*/
-  padding: 4px 2px; /* 保持内部间距 */
+  padding: 5px 6px; /* 保持内部间距 */
   border-radius: 10px 0 0 10px;
   border-width: 0px;
+}
+
+#network {
+  padding-left: 10px;
 }
 
 #custom-reboot,
@@ -86,12 +90,12 @@
 #custom-power:hover,
 /*#workspaces:hover,*/
 #window:hover {
-  background-color: rgba(70, 75, 90, 0.9);
+  background-color: #DECFAC;
 }
 
 /* 工作区激活状态高亮 */
 #workspaces button:hover{
-  background-color: rgba(97, 175, 239, 0.2);
+  background-color: #DECFAC;
   padding: 2px 8px;
   margin: 0 2px;
   border-radius: 10px;

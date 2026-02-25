@@ -14,7 +14,6 @@
   "modules-right": [
     "network",
     "battery",
-    "bluetooth",
     "pulseaudio",
     "backlight",
     "custom/temperature",
@@ -28,18 +27,17 @@
     "format": "{icon}",
     "on-click": "activate",
     "persistent-workspaces": {
-    "*":[1,2,3,4,5,6,7,8,9]
+      "*":[1,2,3,4,5,6,7,8]
     },
     "format-icons": {
-      "1": "󰣇",
-      "2": "󰈹",
-      "3": "󰇮",
-      "4": "",
-      "5": "",
-      "6": "",
-      "7": "",
-      "8": "",
-      "9": "󰖳",
+      "1": "\uea85",
+      "2": "\ueac4",
+      "3": "\ueac4",
+      "4": "\uf268",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
       "default": ""
     }
   },
@@ -120,10 +118,10 @@
   },
   "clock": {
     "interval": 1,
-    "timezone": "Asia/Chengdu",
+    "timezone": "Europe/Paris",
     "format": "<span color='#BF00FF'>  </span>{:%H:%M} ",
     "tooltip": true,
-    "tooltip-format": "{:L%Y 年 %m 月 %d 日, %A}"
+    "tooltip-format": "{:L%A %d %m %Y }"
   },
   "tray": {
     "icon-size": 17,
