@@ -1,8 +1,3 @@
-echo "Installing necessary packages..."
-
-
-
-
 RESET="\e[0m"
 BOLD="\e[1m"
 PURPLE="\e[38;5;141m"
@@ -29,8 +24,8 @@ if ! command -v pacman &>/dev/null; then
 fi
 
 info "Updating system..."
-# sudo pacman -Syu --noconfirm
-# clear
+sudo pacman -Syu --noconfirm
+clear
 
 
 # ==========================
@@ -47,6 +42,7 @@ yay -S --needed --noconfirm \
   noto-fonts-emoji otf-geist-mono
 
 
+success "Sucessfully installed packages"
 
 info "Installing split-monitor-plugin"
 yay -S --needed --noconfirm cmake cpio pkg-config git g++ gcc
@@ -58,35 +54,21 @@ hyprpm reload # Reload the plugins
 # clear
 
 # ==========================
-#        Backup config    =
+#        Backup config     =
 # ==========================
 
 info "Creating backup configs for $(date)"
 
 BACKUP_DIR="$HOME/.choppydev-backup-$(date +%Y%m%d-%H%M%S)"
 mkdir -p $BACKUP_DIR
+cp -r "$HOME/.config" "$BACKUP_DIR/" 2>/dev/null || true
 
+success "Successfully backup config files"
 
 # ==========================
 # Dotfiles installation    =
 # ==========================
 
-# info "Installing dotfiles..."
-
-
-
-
-cp -r "$HOME/.config" "$BACKUP_DIR/" 2>/dev/null || true
-
-
-success "Successfully backup config files"
-
-
-
-# todo : 
-# install slurp
-# install all missing plugins
-# install split-monitor-workspaces split-monitor-workspaces
 info "Installing configurations" 
 CONFIGS=(hypr waybar rofi kitty)
 
@@ -104,9 +86,9 @@ for cfg in "${CONFIGS[@]}"; do
     cp -r ".config/$cfg/" "$HOME/.config/$cfg"
 done
 
-# cp -r ".config/" "$HOME/.config/"
 success "Configs deployed."
 
-echo "Done."
+pkill waybar && hyprctl dispatch exec waybar
+hyprctl reload
 
-# echo $HOME
+echo "Done."

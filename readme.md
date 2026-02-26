@@ -11,6 +11,10 @@ There is a work in progress on this repository
 - [ ] File manager
 - [ ] Hyprlock
 
+
+## Requirements :
+ - Arch 
+ - Yay
  
 ## To find next : 
 - Notification center
