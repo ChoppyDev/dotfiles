@@ -77,3 +77,4 @@ Palette :
 
 #108F42
 
+sudo pacman -S grim slurp wl-clipboard

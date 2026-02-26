@@ -22,24 +22,43 @@
     "clock"
   ],
   "hyprland/workspaces": {
-    "disable-scroll": false,
-    "all-outputs": true,
     "format": "{icon}",
-    "on-click": "activate",
-    "persistent-workspaces": {
-      "*":[1,2,3,4,5,6,7,8]
-    },
     "format-icons": {
-      "1": "\uea85",
-      "2": "\ueac4",
-      "3": "\ueac4",
-      "4": "\uf268",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "default": ""
-    }
+      //  "1": "\uea85",
+      // "2": "\ueac4",
+      // "3": "\ueac4",
+      // "4": "\uf268",
+      // "5": "5",
+      // "6": "6",
+      // "7": "7",
+      // "8": "8",
+      "urgent": "",
+      "active": "", // focused workspace on current monitor 
+      "visible": "", // focused workspace on other monitors
+      "default": "",
+      "empty": "" // persistent (created by this plugin)
+    },
+    "on-scroll-up": "hyprctl dispatch split-cycleworkspaces -1",
+    "on-scroll-down": "hyprctl dispatch split-cycleworkspaces +1",
+    "all-outputs": false // recommended
+    // "disable-scroll": false,
+    // "all-outputs": true,
+    // "format": "{icon}",
+    // "on-click": "activate",
+    // "persistent-workspaces": {
+    //   "*":[1,2,3,4,5,6,7,8]
+    // },
+    // "format-icons": {
+    //   "1": "\uea85",
+    //   "2": "\ueac4",
+    //   "3": "\ueac4",
+    //   "4": "\uf268",
+    //   "5": "5",
+    //   "6": "6",
+    //   "7": "7",
+    //   "8": "8",
+    //   "default": ""
+    // }
   },
   "custom/lock": {
   "format": "<span>  </span>",
@@ -60,7 +79,7 @@
     "tooltip-format": "关机"
   },
   "network": {
-    "format-wifi": "<span > 󰤨 </span>{essid} ",
+    "format-wifi": "<span > 󰤨 </span>  {essid} ",
     "format-ethernet": "<span>\udb80\ude00 </span>   Wired ",
     "tooltip-format": "<span> 󰅧 </span>  {bandwidthUpBytes}  <span> 󰅢 </span>{bandwidthDownBytes}",
     "format-linked": "<span> 󱘖 </span>  {ifname} (No IP) ",
