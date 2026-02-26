@@ -29,8 +29,8 @@ if ! command -v pacman &>/dev/null; then
 fi
 
 info "Updating system..."
-sudo pacman -Syu --noconfirm
-clear
+# sudo pacman -Syu --noconfirm
+# clear
 
 
 # ==========================
@@ -47,21 +47,66 @@ yay -S --needed --noconfirm \
   noto-fonts-emoji otf-geist-mono
 
 
+
+info "Installing split-monitor-plugin"
+yay -S --needed --noconfirm cmake cpio pkg-config git g++ gcc
+hyprpm update
+hyprpm add https://github.com/Duckonaut/split-monitor-workspaces # Add the plugin repository
+hyprpm enable split-monitor-workspaces # Enable the plugin
+hyprpm reload # Reload the plugins
+
+# clear
+
+# ==========================
+#        Backup config    =
+# ==========================
+
+info "Creating backup configs for $(date)"
+
+BACKUP_DIR="$HOME/.choppydev-backup-$(date +%Y%m%d-%H%M%S)"
+mkdir -p $BACKUP_DIR
+
+
 # ==========================
 # Dotfiles installation    =
 # ==========================
 
-info "Installing dotfiles..."
+# info "Installing dotfiles..."
+
+
+
+
+cp -r "$HOME/.config" "$BACKUP_DIR/" 2>/dev/null || true
+
+
+success "Successfully backup config files"
+
+
 
 # todo : 
 # install slurp
 # install all missing plugins
 # install split-monitor-workspaces split-monitor-workspaces
-mkdir ~/.config
+info "Installing configurations" 
+CONFIGS=(hypr waybar rofi kitty)
 
-# ln -sf ~/dotfiles/.config/hypr ~/.config/hypr
-# ln -sf ~/dotfiles/.config/waybar ~/.config/waybar
-# ln -sf ~/dotfiles/.config/dunst ~/.config/dunst
-# ln -sf ~/dotfiles/.config/rofi ~/.config/rofi
+for cfg in "${CONFIGS[@]}"; do
+    info "removing $HOME/.config/$cfg"
+    rm -rf "$HOME/.config/$cfg"
+done
+
+success "Successfully removed files"
+
+mkdir -p ~/.config
+
+for cfg in "${CONFIGS[@]}"; do
+    info "adding $HOME/.config/$cfg"
+    cp -r ".config/$cfg/" "$HOME/.config/$cfg"
+done
+
+# cp -r ".config/" "$HOME/.config/"
+success "Configs deployed."
 
 echo "Done."
+
+# echo $HOME
