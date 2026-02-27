@@ -76,7 +76,7 @@ update() {
     # ==========================
 
     info "Installing configurations" 
-    CONFIGS=(hypr waybar rofi kitty)
+    CONFIGS=(hypr waybar rofi kitty) 
 
     for cfg in "${CONFIGS[@]}"; do
         info "removing $HOME/.config/$cfg"
@@ -94,6 +94,18 @@ update() {
 
     success "Configs deployed."
 
+    info "Cleaning old wallpapers"
+    rm -rf "$HOME/.config/choppydev.mk1/"
+    success "Wallpapers cleaned"
+
+    info "Moving wallpapers"
+
+    mkdir "$HOME/.config/choppydev.mk1"
+    cp -r "./wallpapers/" "$HOME/.config/choppydev.mk1/wallpapers/"
+    success "Wallpapers moved"
+    info "Reloading hyprpaper..."
+    pkill hyprpaper && hyprctl dispatch exec hyprpaper
+    success "Hyprpaper reloaded"
     info "Reloading waybar..."
     pkill waybar && hyprctl dispatch exec waybar
     success "Waybar reloaded"
