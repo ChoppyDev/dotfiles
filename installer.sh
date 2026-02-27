@@ -118,9 +118,7 @@ update() {
 
 
 OPTIONS=("update" "install")
-# read -ra OPTIONS=("update", "install")
 echo "Update dotfiles or install $APPNAME ?" 
-
 select ANSWER in ${OPTIONS[@]}; do 
     if [ -n "$ANSWER" ]; then
 
