@@ -33,10 +33,10 @@
       // "7": "7",
       // "8": "8",
       "urgent": "",
-      "active": "", // focused workspace on current monitor 
-      "visible": "", // focused workspace on other monitors
+      "active": "",
+      "visible": "",
       "default": "",
-      "empty": "" // persistent (created by this plugin)
+      "empty": ""
     },
     "on-scroll-up": "hyprctl dispatch split-cycleworkspaces -1",
     "on-scroll-down": "hyprctl dispatch split-cycleworkspaces +1",
@@ -64,19 +64,19 @@
   "format": "<span>  </span>",
   "on-click": "hyprlock",
   "tooltip": true,
-  "tooltip-format": "锁屏"
+  "tooltip-format": "Lock"
   },
   "custom/reboot": {
     "format": "<span>  </span>",
     "on-click": "systemctl reboot",
     "tooltip": true,
-    "tooltip-format": "重启"
+    "tooltip-format": "Reboot"
   },
   "custom/power": {
     "format": "<span>  </span>",
     "on-click": "systemctl poweroff",
     "tooltip": true,
-    "tooltip-format": "关机"
+    "tooltip-format": "Shutdown"
   },
   "network": {
     "format-wifi": "<span > 󰤨 </span>  {essid} ",
@@ -150,12 +150,12 @@
     "device": "intel_backlight",
     "format": "<span>{icon}</span>{percent}% ",
     "tooltip": true,
-    "tooltip-format": "当前屏幕亮度: {percent}%",
+    "tooltip-format": "{percent}%",
     "format-icons": [
-      "<span> 󰃞 </span>",  // 暗 - 深灰
-      "<span> 󰃝 </span>",  // 中 - 灰
-      "<span> 󰃟 </span>",  // 亮 - 柠檬黄
-      "<span> 󰃠 </span>"   // 最亮 - 金色
+      "<span> 󰃞 </span>",
+      "<span> 󰃝 </span>",
+      "<span> 󰃟 </span>",
+      "<span> 󰃠 </span>"
     ]
   },
   "bluetooth": {

@@ -27,6 +27,7 @@ info "Updating system..."
 sudo pacman -Syu --noconfirm
 clear
 
+info "It is recomended to use installer.sh instead of install.sh"
 
 # ==========================
 # Packages installation    =
@@ -37,7 +38,7 @@ yay -S --needed --noconfirm \
   hyprland xdg-desktop-portal-hyprland \
   waybar rofi hyprlock wlogout swaync \
   grim slurp wl-clipboard hyprpicker hyprshot \
-  nautilus pavucontrol  \
+  nautilus pavucontrol cava \
   ttf-jetbrains-mono-nerd noto-fonts noto-fonts-cjk \
   noto-fonts-emoji otf-geist-mono
 
